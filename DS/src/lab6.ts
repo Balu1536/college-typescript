@@ -11,4 +11,3 @@ function isEven(num:number):boolean{
 
 console.log(isEven(4));
 }
-Lab6();

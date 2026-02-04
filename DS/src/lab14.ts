@@ -1,12 +1,11 @@
 class Student{
-    readonly id:number;
-    constructor(id:number){
-        this.id=55;
+    readonly idc:number;
+    constructor(idc:number){
+        this.idc=idc;
     }
 }
 const student1=new Student(101);
-console.log(student1.id);
-
+console.log(student1.idc);
 class Animal{
     name:string="dog";
     makeSound():void{

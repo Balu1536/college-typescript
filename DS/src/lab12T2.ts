@@ -1,15 +1,16 @@
-function printInputValue() {
-  const inputElement = document.getElementById("username");
+let btn = document.getElementById("btn") as HTMLButtonElement;
 
-  // Type assertion using 'as'
-  const typedInput = inputElement as HTMLInputElement;
+let element: HTMLElement | unknown = document.getElementById("username");
 
-  // Defensive check
-  if (typedInput && typedInput.value !== undefined) {
-    console.log("Input value:", typedInput.value);
+let inputElement = element as HTMLInputElement;
+
+// Step 3: Function to read and log the value
+function printInputValue(): void {
+  // Defensive check: ensure element exists
+  if (inputElement) {
+    console.log("Input Value:", inputElement.value);
   } else {
-    console.log("Input element not found or value is undefined.");
+    console.log("No input element found!");
   }
 }
-
-printInputValue();
+btn.addEventListener("click", printInputValue)

@@ -8,7 +8,7 @@ class Student{
         this.age=age;
     }
     showRollNo(rollNo:number):number{
-        // this.rollNo=rollNo;
+        this.rollNo=rollNo;
         return this.rollNo;
     }
 }
